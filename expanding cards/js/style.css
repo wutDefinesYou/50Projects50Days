@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Roboto:wght@400;700&display=swap');
 
-html, body {
-    min-height: 100%;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Muli', sans-serif;
+    min-height: 100vb;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
 }
 
 .wrapper {
@@ -31,7 +33,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: all 0.7s ease-in;
+    transition: flex 0.7s ease-in;
 }
 
 .item:hover {
@@ -53,4 +55,11 @@ body {
     opacity: 1;
     color: ivory;
     transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 576px) {
+    .item:nth-last-of-type(1),
+    .item:nth-last-of-type(2) {
+        display: none;
+    }
 }
