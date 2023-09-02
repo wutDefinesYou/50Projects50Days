@@ -1,0 +1,11 @@
+<main>
+  <div
+    class="panel"
+    [class]="active === i ? 'active' : ''"
+    *ngFor="let item of items; index as i"
+    [style]="{ 'background-image': 'url(' + item.image + ')' }"
+    (click)="onClick(i)"
+  >
+    <h2>{{ item.title }}</h2>
+  </div>
+</main>
