@@ -30,12 +30,14 @@ class Layout {
 
     this.events()
   }
-  
+
   events() {
     this.viewInit()
     this.flexContainer.children[0].classList.add('clicked')
     this.selected = document.querySelector('.clicked')
-    this.flexContainer.addEventListener('click', $event => this.onClick($event))
+    this.flexContainer.addEventListener('click', ($event) =>
+      this.onClick($event)
+    )
   }
 
   viewInit() {
@@ -56,12 +58,11 @@ class Layout {
 
   onClick($event) {
     let ele
-    
+
     if ($event.target.classList.contains('item')) {
-        ele = $event.target
-    }
-    else if ($event.target.tagName === 'H2') {
-        ele = $event.target.parentElement
+      ele = $event.target
+    } else if ($event.target.tagName === 'H2') {
+      ele = $event.target.parentElement
     }
 
     this.selected.classList.remove('clicked')
