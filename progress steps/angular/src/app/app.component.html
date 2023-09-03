@@ -1,0 +1,20 @@
+<main>
+  <div class="container">
+    <div class="progress-container">
+      <div class="progress" [style]="{ 'inline-size': progressBarSize }"></div>
+      <span
+        class="circle"
+        [class]="i <= activeSteps ? 'active' : ''"
+        *ngFor="let circle of circles; index as i"
+        >{{ circle }}</span
+      >
+    </div>
+    <button [disabled]="activeSteps === 0" (click)="onPrevClick()">Prev</button
+    ><button
+      [disabled]="activeSteps === circles.length - 1"
+      (click)="onNextClick()"
+    >
+      Next
+    </button>
+  </div>
+</main>

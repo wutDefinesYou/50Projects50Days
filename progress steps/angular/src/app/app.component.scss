@@ -1,0 +1,75 @@
+$active: #3498db;
+%progress-bar {
+  block-size: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+main {
+  min-block-size: 100vb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    inline-size: 320px;
+    text-align: center;
+
+    .progress-container {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-block-end: 1.8rem;
+
+      &::before {
+        content: "";
+        @extend %progress-bar;
+        inline-size: 100%;
+        background: lightgray;
+      }
+
+      .progress {
+        @extend %progress-bar;
+        background: $active;
+        transition: inline-size 0.4s ease;
+      }
+
+      .circle {
+        inline-size: 30px;
+        block-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid lightgray;
+        border-radius: 50%;
+        background: white;
+        transition: border 0.8s ease;
+
+        &.active {
+          border: 2px solid $active;
+        }
+      }
+    }
+
+    button {
+      background: $active;
+      padding: 8px 30px;
+      margin-inline: 1rem;
+      border: none;
+      color: ivory;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:active:not(:disabled) {
+        transform: scale(0.98);
+      }
+
+      &:disabled {
+        background: lightgray;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
