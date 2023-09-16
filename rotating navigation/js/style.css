@@ -1,0 +1,114 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Poppins:wght@400;500;800&family=Roboto:wght@400;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #333;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  background: #fff;
+  inline-size: 100vi;
+  min-block-size: 100vb;
+  transition: transform 0.4s linear;
+  transform-origin: 0 0;
+}
+
+.container.container-rotated {
+  transform: rotate(-20deg);
+}
+
+.circle {
+  position: absolute;
+  inset-block-start: -100px;
+  inset-inline-start: -100px;
+  block-size: 200px;
+  inline-size: 200px;
+  background: peachpuff;
+  border-radius: 50%;
+  transition: transform 0.4s linear;
+}
+
+.container-rotated .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  position: absolute;
+  inset-block-start: 70%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.circle button i {
+  font-size: 1.25rem;
+}
+
+.circle button:first-of-type {
+  inset-inline-start: 30%;
+}
+
+.circle button:last-of-type {
+  inset-inline-start: 70%;
+}
+
+section {
+  max-inline-size: 1080px;
+  padding: 80px 100px 20px;
+  line-height: 1.5;
+}
+
+section h1 {
+  margin: 0;
+  font-size: xx-large;
+}
+
+section p:first-of-type {
+  margin-block-start: 0;
+  color: gray;
+  font-style: italic;
+}
+
+section img {
+  max-inline-size: 720px;
+}
+
+nav {
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-end: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transform: translateX(-165%);
+  transition: transform 0.3s ease-in;
+}
+
+nav.container-rotated {
+  transform: translateX(0);
+}
+
+nav span {
+  color: ivory;
+  cursor: pointer;
+}
+
+nav span i {
+  margin-inline-end: 0.5rem;
+}
+
+nav span:nth-of-type(2) {
+  transform: translateX(25%);
+}
+
+nav span:nth-of-type(3) {
+  transform: translateX(50%);
+}
