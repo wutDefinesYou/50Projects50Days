@@ -1,0 +1,44 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-block-size: 100vb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  font-size: 1rem;
+  padding: 16px;
+  block-size: 50px;
+  inline-size: 50px;
+  transition: inline-size 0.3s ease;
+}
+
+.search button {
+  position: absolute;
+  inset: 0;
+  block-size: 50px;
+  inline-size: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.search.active input {
+  inline-size: 200px;
+}
+
+.search.active input:focus {
+  outline: none;
+}
+
+.search.active button {
+  transform: translateX(198px);
+}
