@@ -1,0 +1,10 @@
+<div class="search" [class.active]="active">
+  <input
+    #Input
+    type="text"
+    placeholder="Search..."
+    [(ngModel)]="inputValue"
+  /><button (click)="toggle()">
+    <i class="fas fa-search"></i>
+  </button>
+</div>

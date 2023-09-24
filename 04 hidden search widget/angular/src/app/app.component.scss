@@ -1,0 +1,40 @@
+%default-size {
+  block-size: 50px;
+  inline-size: 50px;
+  font-size: 1rem;
+}
+
+:host {
+  min-block-size: 100vb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+
+  input {
+    @extend %default-size;
+    padding: 16px;
+    transition: inline-size 0.3s ease;
+  }
+
+  button {
+    @extend %default-size;
+    position: absolute;
+    inset: 0;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  &.active {
+    input {
+      inline-size: 200px;
+    }
+
+    button {
+      transform: translateX(198px);
+    }
+  }
+}
