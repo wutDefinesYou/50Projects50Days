@@ -1,0 +1,4 @@
+<div
+  [style.filter]="'blur(' + (load | rangeMapping : 0 : 100 : 30 : 0) + 'px)'"
+></div>
+<p [style.opacity]="load | rangeMapping : 0 : 100 : 0.35 : 1">{{ load }}%</p>
