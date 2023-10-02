@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Poppins:wght@400;500;800&family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  inline-size: 100vi;
+  block-size: 100vb;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  block-size: inherit;
+  display: flex;
+}
+
+div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left,
+.right,
+h1,
+button {
+  position: relative;
+}
+
+.left {
+  background: url(./assets/images/ps5.png) no-repeat center;
+}
+
+.right {
+  background: url(./assets/images/xbox.webp) no-repeat center;
+}
+
+.left,
+.right {
+  background-size: auto 100%;
+  transition: all 0.7s ease-in-out;
+}
+
+.left::before,
+.right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.left:hover,
+.right:hover {
+  flex: 3;
+  background-size: auto 115%;
+}
+
+h1,
+button {
+  z-index: 1;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+
+button {
+  background: transparent;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 576px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left:active,
+  .right:active {
+    flex: 3;
+  }
+}
