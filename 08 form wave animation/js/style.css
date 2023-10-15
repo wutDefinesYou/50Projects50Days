@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Poppins:wght@400;500;800&family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-block-size: 100vb;
+  display: grid;
+  place-items: center;
+  font-family: 'Muli', sans-serif;
+  background: steelblue;
+  color: ivory;
+}
+
+main {
+  inline-size: min(576px, 50%);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.2rem 10%;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-block-end: 2.5rem;
+}
+
+.form-field {
+  margin-block-end: 2.5rem;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  inset-block-start: -5px;
+  color: ivory;
+}
+
+label span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+label.active span {
+  transform: translateY(-20px);
+}
+
+input {
+  inline-size: 100%;
+  background: transparent;
+  color: ivory;
+  border: none;
+  border-bottom: solid 1px ivory;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  inline-size: 100%;
+  display: block;
+  background: lightblue;
+  font-size: 1rem;
+  font-family: 'Muli';
+  padding: 6px 15px;
+  margin-block-end: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: aliceblue;
+}
