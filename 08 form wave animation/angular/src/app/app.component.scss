@@ -1,0 +1,65 @@
+section {
+  padding: 1.5rem 1.8rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: ivory;
+
+  h1 {
+    text-align: center;
+    margin-block-end: 2.5rem;
+  }
+
+  form {
+    p {
+      position: relative;
+
+      &:first-of-type {
+        margin-block-end: 2.5rem;
+      }
+
+      label {
+        position: absolute;
+        inset-block-start: -1.5rem;
+        inset-inline-start: 0;
+
+        span {
+          display: inline-block;
+          transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+      }
+
+      input {
+        inline-size: 100%;
+        background: transparent;
+        color: ivory;
+        border: none;
+        border-bottom: solid 1px ivory;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:focus + label,
+        &:active + label {
+          span {
+            transform: translateY(-0.8rem);
+          }
+        }
+      }
+    }
+
+    button {
+      margin-block-start: 0.8rem;
+      inline-size: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background: lightblue;
+      cursor: pointer;
+    }
+  }
+
+  p > a {
+    text-decoration: none;
+    color: lightblue;
+  }
+}

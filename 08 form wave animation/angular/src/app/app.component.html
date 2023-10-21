@@ -1,0 +1,29 @@
+<section>
+  <h1>Log In</h1>
+  <form>
+    <p>
+      <input type="email" name="email" autocomplete="off" />
+      <label for="email">
+        <span
+          *ngFor="let letter of email; index as i"
+          [style]="{ 'transition-delay': 50 * i + 'ms' }"
+          >{{ letter }}</span
+        >
+      </label>
+    </p>
+
+    <p>
+      <input type="password" name="password" />
+      <label for="password">
+        <span
+          *ngFor="let letter of password; index as i"
+          [style]="{ 'transition-delay': 50 * i + 'ms' }"
+          >{{ letter }}</span
+        >
+      </label>
+    </p>
+
+    <button type="submit">Log In</button>
+  </form>
+  <p>Do not have an account yet? <a href="">Create a new one</a></p>
+</section>
