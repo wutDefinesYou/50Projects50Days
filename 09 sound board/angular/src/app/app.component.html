@@ -1,0 +1,4 @@
+<ng-container *ngFor="let animal of animals">
+  <audio #audio [src]="animal.url"></audio>
+  <button (click)="makeSound(audio)">{{ animal.name }}</button>
+</ng-container>
