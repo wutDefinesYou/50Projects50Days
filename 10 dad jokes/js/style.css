@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Poppins:wght@400;500;800&family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-block-size: 100vb;
+  display: grid;
+  place-items: center;
+  background: #686de0;
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  inline-size: 50%;
+  background: ivory;
+  padding: 3.05rem 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+p {
+  margin-block: 3.05rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+button {
+  background: #9f68e0;
+  color: ivory;
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
