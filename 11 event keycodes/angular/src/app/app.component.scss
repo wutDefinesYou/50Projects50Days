@@ -1,0 +1,21 @@
+div {
+  border: 1px solid dimgray;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 6px 12px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  justify-content: center;
+  margin: 6px;
+  min-inline-size: 100px;
+  position: relative;
+
+  span {
+    position: absolute;
+    inset-block-start: -18px;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    color: slategray;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}

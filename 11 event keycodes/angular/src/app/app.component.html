@@ -1,0 +1,16 @@
+@if(pressed) {
+<div>
+  {{ key === " " ? "space" : key }}
+  <span>Key</span>
+</div>
+<div>
+  {{ keycode }}
+  <span>Key Code</span>
+</div>
+<div>
+  {{ code }}
+  <span>Code</span>
+</div>
+} @else {
+<div>Press any key to show its key code</div>
+}
